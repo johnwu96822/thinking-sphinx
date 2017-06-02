@@ -21,7 +21,7 @@ module ThinkingSphinx::ActiveRecord::DatabaseAdapters
     def adapter_type_for(model)
       class_name = model.connection.class.name
       case class_name.split('::').last
-      when 'MysqlAdapter', 'Mysql2Adapter'
+      when 'MysqlAdapter', 'Mysql2Adapter', 'MakaraMysql2Adapter'
         :mysql
       when 'PostgreSQLAdapter'
         :postgresql
